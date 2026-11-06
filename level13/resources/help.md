@@ -1,1 +1,1 @@
-decompile it and remove the uid check. Recompile and run. You have the token now.
+decompile the file `level13` and remove the uid check. Recompile and run. You have the token now.
