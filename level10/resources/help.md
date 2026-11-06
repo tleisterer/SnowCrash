@@ -4,7 +4,7 @@ just use the script for that
 
 ```Shell
 # a.out is the compiled TOCTOU.c
-# If you have trouble compiling it in ~
+# If you have trouble compiling it in $HOME
 # compile it in /tmp/somedir
 
 ./TOCTOU.sh ./a.out

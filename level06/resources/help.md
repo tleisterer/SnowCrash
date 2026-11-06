@@ -44,9 +44,9 @@ print $r;
 
 now you just have to figure out the php syntax (hint: backtick operator)
 
-and then execute 
+and then execute
 
 ```PHP
-echo 'something, figure it out yourself' > /tmp/file
+echo '[x ${`getflag`}]' > /tmp/file
 ./level06 /tmp/file
 ```
