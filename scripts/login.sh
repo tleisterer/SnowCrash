@@ -11,15 +11,15 @@ normalize_number() {
 }
 
 login() {
-    local level_number=$1
+    local user=$1
     local level_token=$2
 
-    echo "Logging in to level$level_number..."
+    echo "Logging in to level$user..."
 
-    local passfile="/tmp/level$level_number.ssh_askpass"
+    local passfile="/tmp/level$user.ssh_askpass"
     echo -e "echo \"$level_token\"" > "$passfile"
     chmod 777 "$passfile"
-    SSH_ASKPASS=$passfile setsid ssh -p "$PORT" "level$level_number@localhost"
+    SSH_ASKPASS=$passfile setsid ssh -p "$PORT" "level$user@localhost"
 }
 
 main() {
@@ -34,7 +34,7 @@ main() {
     # set the port to the default value if not set
     local PORT=${PORT:-4000}
     local level_number=$(normalize_number "$1")
-    local level_token_file="level$(normalize_number $(("$level_number" - 1)))/token.txt"
+    local level_token_file="level$(normalize_number $(("$level_number" - 1)))/flag"
 
     if [[ $level_number == 00 ]]; then
         login "$level_number" "level00"
