@@ -15,7 +15,7 @@ chmod 777 ~/public_file
 [ -L ~/activedir ] && unlink ~/activedir
 rm -rf ~/activedir
 
-ln -s ~/activedir /tmp/dir0
+ln -s /tmp/dir0 ~/activedir
 ln -sf ~/public_file /tmp/dir0/lnk
 ln -sf ~/token /tmp/dir1/lnk
 

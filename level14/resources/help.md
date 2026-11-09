@@ -1,6 +1,6 @@
 Decompile `getflag`, remove all of the checks and just leave the flag for 14. Recompile and run. You have the token now.
 
-```Shell
+```
 Logging in to level14...
            _____                      _____               _
           / ____|                    / ____|             | |
